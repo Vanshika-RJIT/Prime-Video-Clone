@@ -1,0 +1,23 @@
+{
+  "short_name": "Prime Video",
+  "name": "Prime Video Clone",
+  "icons": [
+    {
+      "src": "pv-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "pv-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0f171e",
+  "background_color": "#0f171e"
+}
+
+
+
