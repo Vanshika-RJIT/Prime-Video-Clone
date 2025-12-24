@@ -1,7 +1,14 @@
 {
-  "name": "prime-clone",
-  "version": "0.1.0",
+  "name": "prime-video-clone",
+  "version": "1.0.0",
+  "description": "A fully functional Amazon Prime Video clone built with React.js",
   "private": true,
+  "author": "Vanshika Sikarwar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vanshika-RJIT/prime-video-clone.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -18,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "vercel-build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,3 +47,4 @@
     ]
   }
 }
+
