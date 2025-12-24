@@ -6,7 +6,7 @@ A fully functional, responsive Amazon Prime Video clone built with React.js feat
 
 ## 🌟 Live Demo
 
-**🚀 [View Live Demo](#)** _(Add your Netlify link here after deployment)_
+**🚀 [View Live Demo](#)** _(Add your Vercel link here after deployment)_
 
 ---
 
@@ -94,7 +94,7 @@ _Personal watchlist with localStorage persistence_
 
 ### Deployment
 
-- **Netlify** - Hosting and deployment
+- **Vercel** - Hosting and deployment
 - **Git** - Version control
 
 ---
@@ -107,8 +107,7 @@ Prime-Video-Clone/
 │   ├── index.html              # HTML template
 │   ├── manifest.json           # PWA manifest
 │   ├── pv-logo.png            # Favicon
-│   ├── styles.css             # Global styles
-│   └── _redirects             # Netlify redirects
+│   └── styles.css             # Global styles
 ├── src/
 │   ├── components/
 │   │   ├── App.jsx            # Main app component
@@ -137,7 +136,7 @@ Prime-Video-Clone/
 │   ├── images/                # Image assets
 │   └── index.js               # App entry point
 ├── .gitignore                 # Git ignore rules
-├── netlify.toml               # Netlify configuration
+├── vercel.json                # Vercel configuration
 ├── package.json               # Dependencies
 └── README.md                  # This file
 ```
@@ -157,7 +156,7 @@ Prime-Video-Clone/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/prime-video-clone.git
+   git clone https://github.com/Vanshika-RJIT/prime-video-clone.git
    cd prime-video-clone
    ```
 
@@ -199,24 +198,36 @@ This creates an optimized production build in the `build` folder.
 
 ---
 
-## 🌐 Deployment
+## 🌐 Deployment on Vercel
 
-### Deploy to Netlify (Recommended)
+### Method 1: Vercel CLI (Recommended)
 
-#### Method 1: Drag & Drop (Fastest)
-
-1. **Build your project**
+1. **Install Vercel CLI**
 
    ```bash
-   npm run build
+   npm install -g vercel
    ```
 
 2. **Deploy**
-   - Go to [Netlify Drop](https://app.netlify.com/drop)
-   - Drag the `build` folder onto the page
-   - Done! 🎉
 
-#### Method 2: GitHub Integration
+   ```bash
+   vercel
+   ```
+
+   Follow the prompts:
+   - Set up and deploy? **Y**
+   - Which scope? **Select your account**
+   - Link to existing project? **N**
+   - What's your project's name? **prime-video-clone**
+   - In which directory is your code located? **./**
+   - Want to override settings? **N**
+
+3. **Production Deployment**
+   ```bash
+   vercel --prod
+   ```
+
+### Method 2: GitHub Integration (Easiest)
 
 1. **Push to GitHub**
 
@@ -226,35 +237,44 @@ This creates an optimized production build in the `build` folder.
    git push origin main
    ```
 
-2. **Connect to Netlify**
-   - Login to [Netlify](https://app.netlify.com)
-   - Click "Add new site" → "Import an existing project"
-   - Select your repository
-   - Build settings:
-     - **Build command:** `npm run build`
-     - **Publish directory:** `build`
-   - Click "Deploy site"
+2. **Import to Vercel**
+   - Go to [Vercel Dashboard](https://vercel.com/new)
+   - Click **"Import Project"**
+   - Import your GitHub repository
+   - Vercel auto-detects Create React App
+   - Click **"Deploy"**
+   - Done! 🎉
 
-#### Method 3: Netlify CLI
+### Method 3: Direct Deployment
 
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
+1. **Build the project**
 
-# Login
-netlify login
+   ```bash
+   npm run build
+   ```
 
-# Deploy
-npm run build
-netlify deploy --prod
-```
+2. **Deploy with Vercel CLI**
+   ```bash
+   vercel --prod
+   ```
 
 ### Custom Domain Setup
 
-1. In Netlify Dashboard → **Domain settings**
-2. Click **"Add custom domain"**
-3. Follow DNS configuration instructions
-4. SSL certificate is automatically provisioned
+1. Go to your project in Vercel Dashboard
+2. Navigate to **Settings** → **Domains**
+3. Add your custom domain
+4. Update DNS records as instructed
+5. SSL certificate is automatically provisioned
+
+### Environment Variables (Optional)
+
+If you need environment variables:
+
+1. Go to **Settings** → **Environment Variables**
+2. Add variables:
+   - `REACT_APP_SITE_NAME=Prime Video Clone`
+   - `REACT_APP_VERSION=1.0.0`
+3. Redeploy for changes to take effect
 
 ---
 
@@ -391,7 +411,7 @@ The app includes these curated content sections:
 
 ### Issue: Page not found on refresh
 
-**Solution:** Already fixed with `_redirects` file in public folder
+**Solution:** Already fixed with `vercel.json` configuration for SPA routing
 
 ### Issue: Build warnings
 
@@ -433,9 +453,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🎉 Show Your Support
 
 Give a ⭐️ if you like this project!
-
----
-
-_Made with ❤️ using React.js_
-
-_Last Updated: December 2024_
