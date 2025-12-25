@@ -6,7 +6,7 @@ A fully functional, responsive Amazon Prime Video clone built with React.js feat
 
 ## 🌟 Live Demo
 
-**🚀 [View Live Demo](#)** _(Add your Vercel link here after deployment)_
+**🚀 [View Live Demo](https://prime-video-clone-puce.vercel.app/)**
 
 ---
 
